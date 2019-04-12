@@ -96,20 +96,21 @@
 
 
 
-  <meta name="description" content="使用github page可以免费搭建自己的博客，hexo是个好用的博客系统，关键是可以用markdown写博客，很方便。">
+  <meta name="description" content="可以使用github的pages免费建自己的静态网站（博客），而hexo是个简单易用的博客系统，支持使用markdown写博客。二者结合起来就可以搭建一个自己的博客系统了。在使用之前，让我们先花点时间把环境配置好。">
 <meta name="keywords" content="github,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo+github搭建博客-环境">
-<meta property="og:url" content="https://smashell.github.io/2019/04/12/hexo/index.html">
+<meta property="og:url" content="https://smashell.github.io/2019/04/12/hexo-setup/index.html">
 <meta property="og:site_name" content="smashell&#39;s life">
-<meta property="og:description" content="使用github page可以免费搭建自己的博客，hexo是个好用的博客系统，关键是可以用markdown写博客，很方便。">
+<meta property="og:description" content="可以使用github的pages免费建自己的静态网站（博客），而hexo是个简单易用的博客系统，支持使用markdown写博客。二者结合起来就可以搭建一个自己的博客系统了。在使用之前，让我们先花点时间把环境配置好。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g204twxk10j20qa08nwm2.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g1zzce0ey9j20m50ien39.jpg">
-<meta property="og:updated_time" content="2019-04-12T10:04:37.236Z">
+<meta property="og:updated_time" content="2019-04-12T12:40:39.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github搭建博客-环境">
-<meta name="twitter:description" content="使用github page可以免费搭建自己的博客，hexo是个好用的博客系统，关键是可以用markdown写博客，很方便。">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g1zzce0ey9j20m50ien39.jpg">
+<meta name="twitter:description" content="可以使用github的pages免费建自己的静态网站（博客），而hexo是个简单易用的博客系统，支持使用markdown写博客。二者结合起来就可以搭建一个自己的博客系统了。在使用之前，让我们先花点时间把环境配置好。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g204twxk10j20qa08nwm2.jpg">
 
 
 
@@ -117,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://smashell.github.io/2019/04/12/hexo/">
+  <link rel="canonical" href="https://smashell.github.io/2019/04/12/hexo-setup/">
 
 
 
@@ -313,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/04/12/hexo/">
+    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/04/12/hexo-setup/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smashell">
@@ -356,7 +357,7 @@
                 
               
 
-              <time title="Created: 2019-04-12 16:44:46 / Modified: 18:04:37" itemprop="dateCreated datePublished" datetime="2019-04-12T16:44:46+08:00">2019-04-12</time>
+              <time title="Created: 2019-04-12 16:44:46 / Modified: 20:40:39" itemprop="dateCreated datePublished" datetime="2019-04-12T16:44:46+08:00">2019-04-12</time>
             
 
             
@@ -395,15 +396,22 @@
       
 
       
-        <p>使用github page可以免费搭建自己的博客，hexo是个好用的博客系统，关键是可以用markdown写博客，很方便。<br><a id="more"></a></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>查看系统是否安装了git：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></p>
-<p>如果系统没有安装git，可以使用<a href="https://brew.sh/" target="_blank" rel="noopener">homebew</a>安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></p>
-<p>git的使用可以参考<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a>。</p>
-<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p><a href="https://hexo.io" target="_blank" rel="noopener">hexo</a>依赖<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>，所以，需要首先安装Node.js。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></p>
+        <p>可以使用github的<a href="https://pages.github.com/" target="_blank" rel="noopener">pages</a>免费建自己的静态网站（博客），而hexo是个简单易用的博客系统，支持使用markdown写博客。二者结合起来就可以搭建一个自己的博客系统了。在使用之前，让我们先花点时间把环境配置好。<br><img src="https://ws1.sinaimg.cn/large/51db2b4fly1g204twxk10j20qa08nwm2.jpg" alt><br><a id="more"></a></p>
+<blockquote>
+<p>本文是在macOS环境下测试通过的，其他系统可能会有不同</p>
+</blockquote>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>首先查看系统是否安装了git：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></p>
+<p>一般来说mac系统已经安装好git客户端了，如果系统没有安装git，或者嫌版本太低，可以使用<a href="https://brew.sh/" target="_blank" rel="noopener">homebew</a>安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></p>
+<p>关于git的使用可以参考<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a>。</p>
+<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p><a href="https://hexo.io" target="_blank" rel="noopener">hexo</a>依赖<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>，所以，需要首先安装Node.js：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></p>
 <p>验证安装是否成功：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><h2 id="设置github"><a href="#设置github" class="headerlink" title="设置github"></a>设置github</h2><h3 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h3><p>如果没有<a href="https://github.com/" target="_blank" rel="noopener">github</a>，首先注册一个账号，安装步骤来就行，注册完需要通过邮箱验证，验证完就可以发布github page了。</p>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>然后安装hexo，因为生成的页面需要push到github上，所以，还需要安装<code>hexo-deployer-git</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><h2 id="设置github"><a href="#设置github" class="headerlink" title="设置github"></a>设置github</h2><blockquote>
+<p>如果github已经设置好了，可以直接跳过本节</p>
+</blockquote>
+<h3 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h3><p>如果没有<a href="https://github.com/" target="_blank" rel="noopener">github</a>，首先注册一个账号，安装步骤来就行，注册完需要通过邮箱验证，验证完就可以发布github page了。</p>
 <h3 id="创建github-page仓库"><a href="#创建github-page仓库" class="headerlink" title="创建github page仓库"></a>创建github page仓库</h3><p>登录github，点击页面右上角的+号，选择”New repository”新建一个仓库，仓库名字的前缀要和你github账号的名字一样，如下图：<br><img src="https://ws1.sinaimg.cn/large/51db2b4fly1g1zzce0ey9j20m50ien39.jpg" alt></p>
+<h3 id="使用SSH连接Github"><a href="#使用SSH连接Github" class="headerlink" title="使用SSH连接Github"></a>使用SSH连接Github</h3><p>每次将修改好的代码或者页面push到github页面的时候都需要输入用户名和密码实在是繁琐，幸好可以使用ssh连接github，它既可以记住密码又能保证安全。具体的设置可以查看<a href="http://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html" target="_blank" rel="noopener">这个教程</a>。<br>如果你有多个git，比如公司一个gitlab账号，自己私人用的一个githab账号，可能通过这个<a href="https://www.jianshu.com/p/3fc93c16ad2d" target="_blank" rel="noopener">设置</a>同时在一台机器上登录2个git账号</p>
 
       
     </div>
@@ -564,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.1.</span> <span class="nav-text">git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs"><span class="nav-number">1.2.</span> <span class="nav-text">nodejs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">1.3.</span> <span class="nav-text">hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置"><span class="nav-number">2.</span> <span class="nav-text">设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置github"><span class="nav-number">2.1.</span> <span class="nav-text">设置github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册github"><span class="nav-number">2.1.1.</span> <span class="nav-text">注册github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建github-page仓库"><span class="nav-number">2.1.2.</span> <span class="nav-text">创建github page仓库</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.1.</span> <span class="nav-text">git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs"><span class="nav-number">1.2.</span> <span class="nav-text">nodejs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">1.3.</span> <span class="nav-text">hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置"><span class="nav-number">2.</span> <span class="nav-text">设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置github"><span class="nav-number">2.1.</span> <span class="nav-text">设置github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册github"><span class="nav-number">2.1.1.</span> <span class="nav-text">注册github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建github-page仓库"><span class="nav-number">2.1.2.</span> <span class="nav-text">创建github page仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用SSH连接Github"><span class="nav-number">2.1.3.</span> <span class="nav-text">使用SSH连接Github</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
