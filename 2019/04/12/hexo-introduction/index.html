@@ -96,16 +96,20 @@
 
 
 
-  <meta name="description" content="Peaceful society and their own pain, this is the meaning of growth.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="smashell&#39;s life">
-<meta property="og:url" content="https://smashell.github.io/index.html">
+  <meta name="description" content="hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo+github搭建博客-hexo使用入门">
+<meta property="og:url" content="https://smashell.github.io/2019/04/12/hexo-introduction/index.html">
 <meta property="og:site_name" content="smashell&#39;s life">
-<meta property="og:description" content="Peaceful society and their own pain, this is the meaning of growth.">
+<meta property="og:description" content="hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g2056p5ntfj20ox08adg1.jpg">
+<meta property="og:updated_time" content="2019-04-12T13:21:02.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="smashell&#39;s life">
-<meta name="twitter:description" content="Peaceful society and their own pain, this is the meaning of growth.">
+<meta name="twitter:title" content="使用hexo+github搭建博客-hexo使用入门">
+<meta name="twitter:description" content="hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g2056p5ntfj20ox08adg1.jpg">
 
 
 
@@ -113,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://smashell.github.io/">
+  <link rel="canonical" href="https://smashell.github.io/2019/04/12/hexo-introduction/">
 
 
 
@@ -123,7 +127,7 @@
   };
 </script>
 
-  <title>smashell's life</title>
+  <title>使用hexo+github搭建博客-hexo使用入门 | smashell's life</title>
   
 
 
@@ -171,8 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,7 +217,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -293,9 +296,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -327,10 +330,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/12/hexo-introduction/" class="post-title-link" itemprop="url">使用hexo+github搭建博客-hexo使用入门</a>
+          <h1 class="post-title" itemprop="name headline">使用hexo+github搭建博客-hexo使用入门
+
               
             
           </h1>
@@ -394,20 +395,25 @@
       
 
       
-        
-          <p><img src="https://ws1.sinaimg.cn/large/51db2b4fly1g2056p5ntfj20ox08adg1.jpg" alt><br>hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/12/hexo-introduction/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <p><img src="https://ws1.sinaimg.cn/large/51db2b4fly1g2056p5ntfj20ox08adg1.jpg" alt><br>hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。<br><a id="more"></a></p>
+<h1 id="一个实例"><a href="#一个实例" class="headerlink" title="一个实例"></a>一个实例</h1><h2 id="第一步、初始化"><a href="#第一步、初始化" class="headerlink" title="第一步、初始化"></a>第一步、初始化</h2><p>在电脑上建立一个文件夹，用于存放博客相关文件，比如叫myblog：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir myblog</span><br><span class="line">hexo init myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p>这样本地的博客环境就初始化完成了，可以看到在myblog下生成了一些文件和文件夹：</p>
+<blockquote>
+<p>_config.yml：站点配置文件，可以打开设置自己的博客名称、站点信息、网站主题、部署到github需要的信息等<br>source：创建的原始md格式页面在这个目录下，可以使用任何markdown编辑器进行编辑<br>themes：如果要换主题风格，需要将主题下载到这个路径下，然后修改_config.xml使之生效</p>
+</blockquote>
+<h2 id="第二步、创建页面"><a href="#第二步、创建页面" class="headerlink" title="第二步、创建页面"></a>第二步、创建页面</h2><p>使用new命令（简写成n）可以创建一篇新的博客：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n my-first-page</span><br></pre></td></tr></table></figure></p>
+<p>该命令会在source/_posts路径下新增一个<code>my-first-page.md</code>的markdown文件，可以使用自己喜欢的markdown编辑器打开进行编辑。</p>
+<h2 id="第三步、生成静态页面"><a href="#第三步、生成静态页面" class="headerlink" title="第三步、生成静态页面"></a>第三步、生成静态页面</h2><p>编辑好页面之后，使用generate命令生成静态页面，如果想在生成之前，清空之前的结果，可以使用clean命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<h2 id="第四步、运行"><a href="#第四步、运行" class="headerlink" title="第四步、运行"></a>第四步、运行</h2><p>运行即在本地启动一个web server，可以本地浏览页面效果。运行使用server命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p>启动后，使用浏览器打开<code>http://localhost:4000</code>即可看到效果。</p>
+<h2 id="第五步、部署"><a href="#第五步、部署" class="headerlink" title="第五步、部署"></a>第五步、部署</h2><p>部署使用deploy命令，这个是<code>hexo-deployer-git</code>插件提供的，上一篇文章已经说过来了，这里就不重复了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>第一次执行需要输入github的用户名和密码，以后可以直接执行。部署完成后，可以在浏览器打开你的页面看看：<a href="https://smashell.github.io/。">https://smashell.github.io/。</a></p>
+<blockquote>
+<p>上传成功后，需要等待几十秒到几分钟才能生效</p>
+</blockquote>
+
       
-    </p></div>
+    </div>
 
     
 
@@ -426,163 +432,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/04/12/hexo-setup/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smashell">
-      <meta itemprop="description" content="Peaceful society and their own pain, this is the meaning of growth.">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="smashell's life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/12/hexo-setup/" class="post-title-link" itemprop="url">使用hexo+github搭建博客-环境</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-04-12 16:44:46 / Modified: 20:40:39" itemprop="dateCreated datePublished" datetime="2019-04-12T16:44:46+08:00">2019-04-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>可以使用github的<a href="https://pages.github.com/" target="_blank" rel="noopener">pages</a>免费建自己的静态网站（博客），而hexo是个简单易用的博客系统，支持使用markdown写博客。二者结合起来就可以搭建一个自己的博客系统了。在使用之前，让我们先花点时间把环境配置好。<br><img src="https://ws1.sinaimg.cn/large/51db2b4fly1g204twxk10j20qa08nwm2.jpg" alt><br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/12/hexo-setup/#more" rel="contents">
-                Read more &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/12/hexo-setup/" rel="next" title="使用hexo+github搭建博客-环境">
+                <i class="fa fa-chevron-left"></i> 使用hexo+github搭建博客-环境
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -592,14 +471,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -619,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -685,6 +574,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个实例"><span class="nav-number">1.</span> <span class="nav-text">一个实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步、初始化"><span class="nav-number">1.1.</span> <span class="nav-text">第一步、初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步、创建页面"><span class="nav-number">1.2.</span> <span class="nav-text">第二步、创建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步、生成静态页面"><span class="nav-number">1.3.</span> <span class="nav-text">第三步、生成静态页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步、运行"><span class="nav-number">1.4.</span> <span class="nav-text">第四步、运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步、部署"><span class="nav-number">1.5.</span> <span class="nav-text">第五步、部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -814,6 +720,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -829,6 +739,8 @@
 
   
 
+
+  
 
 
   
