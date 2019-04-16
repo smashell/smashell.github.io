@@ -105,7 +105,7 @@
 <meta property="og:description" content="hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/51db2b4fly1g2056p5ntfj20ox08adg1.jpg">
-<meta property="og:updated_time" content="2019-04-12T13:21:02.053Z">
+<meta property="og:updated_time" content="2019-04-15T08:39:43.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github搭建博客-hexo使用入门">
 <meta name="twitter:description" content="hexo是一个快速、简洁且高效的博客框架，生成静态页面的速度超快，支持markdown，有丰富的插件和主题，可以一键部署到github上。">
@@ -356,12 +356,24 @@
                 
               
 
-              <time title="Created: 2019-04-12 20:47:05 / Modified: 21:21:02" itemprop="dateCreated datePublished" datetime="2019-04-12T20:47:05+08:00">2019-04-12</time>
+              <time title="Created: 2019-04-12 20:47:05" itemprop="dateCreated datePublished" datetime="2019-04-12T20:47:05+08:00">2019-04-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-15 16:39:43" itemprop="dateModified" datetime="2019-04-15T16:39:43+08:00">2019-04-15</time>
               
             
           </span>
@@ -411,6 +423,17 @@
 <blockquote>
 <p>上传成功后，需要等待几十秒到几分钟才能生效</p>
 </blockquote>
+<h1 id="主题（theme）"><a href="#主题（theme）" class="headerlink" title="主题（theme）"></a>主题（theme）</h1><p>hexo支持更换不同的主题，可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a>下载自己喜欢的主题。其中，主题<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT</a>主题使用的任比较多，本站就是用的这个主题。它支持四种不同的Scheme（就是不同的页面风格，本站使用的是<code>Mist</code>），5种不同的代码高亮模式。<br>一般主题的使用，都是用如下步骤：</p>
+<ul>
+<li><p>第一步：下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二步：应用<br>修改hexo的配置文件<code>_config.yml</code>，找到 <code>theme</code>配置项，修改成相应的主题即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三步：配置主题（可选）<br>如果相对主题做一些定制化的设置，通常需要修改<code>theme/{theme_name}/_config.yml</code>文件，根据主题的相关说明，直接修改即可。比如，本站使用的主题<code>next</code>就修改了<code>theme/next/_config.yml</code></p>
+</li>
+</ul>
 
       
     </div>
@@ -585,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个实例"><span class="nav-number">1.</span> <span class="nav-text">一个实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步、初始化"><span class="nav-number">1.1.</span> <span class="nav-text">第一步、初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步、创建页面"><span class="nav-number">1.2.</span> <span class="nav-text">第二步、创建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步、生成静态页面"><span class="nav-number">1.3.</span> <span class="nav-text">第三步、生成静态页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步、运行"><span class="nav-number">1.4.</span> <span class="nav-text">第四步、运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步、部署"><span class="nav-number">1.5.</span> <span class="nav-text">第五步、部署</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个实例"><span class="nav-number">1.</span> <span class="nav-text">一个实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步、初始化"><span class="nav-number">1.1.</span> <span class="nav-text">第一步、初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步、创建页面"><span class="nav-number">1.2.</span> <span class="nav-text">第二步、创建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步、生成静态页面"><span class="nav-number">1.3.</span> <span class="nav-text">第三步、生成静态页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步、运行"><span class="nav-number">1.4.</span> <span class="nav-text">第四步、运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步、部署"><span class="nav-number">1.5.</span> <span class="nav-text">第五步、部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题（theme）"><span class="nav-number">2.</span> <span class="nav-text">主题（theme）</span></a></li></ol></div>
             
 
           </div>
