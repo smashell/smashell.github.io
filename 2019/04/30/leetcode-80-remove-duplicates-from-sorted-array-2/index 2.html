@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.Do not allocate extra space for another array, you must do this by modif">
+  <meta name="description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.Do not allocate extra space for another array, you must do this by m">
 <meta name="keywords" content="leetcode,数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="26. Remove Duplicates from Sorted Array">
-<meta property="og:url" content="https://smashell.github.io/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/index.html">
+<meta property="og:title" content="80. Remove Duplicates from Sorted Array II">
+<meta property="og:url" content="https://smashell.github.io/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/index.html">
 <meta property="og:site_name" content="smashell&#39;s life">
-<meta property="og:description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.Do not allocate extra space for another array, you must do this by modif">
+<meta property="og:description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.Do not allocate extra space for another array, you must do this by m">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-30T03:32:21.765Z">
+<meta property="og:updated_time" content="2019-04-30T03:30:59.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="26. Remove Duplicates from Sorted Array">
-<meta name="twitter:description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.Do not allocate extra space for another array, you must do this by modif">
+<meta name="twitter:title" content="80. Remove Duplicates from Sorted Array II">
+<meta name="twitter:description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.Do not allocate extra space for another array, you must do this by m">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://smashell.github.io/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/">
+  <link rel="canonical" href="https://smashell.github.io/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>26. Remove Duplicates from Sorted Array | smashell's life</title>
+  <title>80. Remove Duplicates from Sorted Array II | smashell's life</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/">
+    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smashell">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">26. Remove Duplicates from Sorted Array
+          <h1 class="post-title" itemprop="name headline">80. Remove Duplicates from Sorted Array II
 
               
             
@@ -354,24 +354,12 @@
                 
               
 
-              <time title="Created: 2019-04-16 19:58:28" itemprop="dateCreated datePublished" datetime="2019-04-16T19:58:28+08:00">2019-04-16</time>
+              <time title="Created: 2019-04-30 11:22:09 / Modified: 11:30:59" itemprop="dateCreated datePublished" datetime="2019-04-30T11:22:09+08:00">2019-04-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-04-30 11:32:21" itemprop="dateModified" datetime="2019-04-30T11:32:21+08:00">2019-04-30</time>
               
             
           </span>
@@ -405,16 +393,11 @@
       
 
       
-        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.<br>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.<br><a id="more"></a><br><strong>Example 1:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [1,1,2],</span><br><span class="line">Your <span class="keyword">function</span> should <span class="built_in">return</span> length = 2, with the first two elements of nums being 1 and 2 respectively.</span><br><span class="line">It doesn<span class="string">'t matter what you leave beyond the returned length.</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Example 2:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line">Your <span class="keyword">function</span> should <span class="built_in">return</span> length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</span><br><span class="line">It doesn<span class="string">'t matter what values are set beyond the returned length.</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Clarification:</strong><br>Confused why the returned value is an integer but your answer is an array?<br>Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.<br>Internally you can think of this:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="keyword">int</span> len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>排好序的数组，使用2个指针（索引）遍历：</p>
-<ul>
-<li>一个指针用于记录新数组最后一个元素的位置</li>
-<li>一个指针用于遍历老数组</li>
-<li>当2个指针的值不同时，2个指针都+1；当2个指针的值相同时，遍历数组的指针前进，另一个指针不动，直到值不同<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> len = nums.size();</span><br><span class="line">      <span class="keyword">if</span> (<span class="number">0</span> == len) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">int</span> index = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] != num[index - <span class="number">1</span>]) &#123;</span><br><span class="line">          num[index++] = num[i];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.<br>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.<br>Example 1:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [1,1,1,2,2,3],</span><br><span class="line">Your <span class="keyword">function</span> should <span class="built_in">return</span> length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</span><br><span class="line">It doesn<span class="string">'t matter what you leave beyond the returned length.</span></span><br></pre></td></tr></table></figure></p>
+<p>Example 2:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [0,0,1,1,1,1,2,3,3],</span><br><span class="line">Your <span class="keyword">function</span> should <span class="built_in">return</span> length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.</span><br><span class="line">It doesn<span class="string">'t matter what values are set beyond the returned length.</span></span><br></pre></td></tr></table></figure></p>
+<p>Clarification:<br>Confused why the returned value is an integer but your answer is an array?<br>Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.<br>Internally you can think of this:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="keyword">int</span> len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>跟<a href="/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/" title="26. Remove Duplicates from Sorted Array">26. Remove Duplicates from Sorted Array</a>比，可以重复一次，代码结构是一样的，只不过需要跳过一个重复记录。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length();</span><br><span class="line">        <span class="keyword">if</span> (len &lt;=<span class="number">2</span>) <span class="keyword">return</span> len;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; len; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != nums[index<span class="number">-2</span>]) &#123;</span><br><span class="line">                nums[index++] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -453,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/12/hexo-introduction/" rel="next" title="使用hexo+github搭建博客-hexo使用入门">
-                <i class="fa fa-chevron-left"></i> 使用hexo+github搭建博客-hexo使用入门
+              <a href="/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/" rel="next" title="26. Remove Duplicates from Sorted Array">
+                <i class="fa fa-chevron-left"></i> 26. Remove Duplicates from Sorted Array
               </a>
             
           </div>
@@ -462,10 +445,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/" rel="prev" title="80. Remove Duplicates from Sorted Array II">
-                80. Remove Duplicates from Sorted Array II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
