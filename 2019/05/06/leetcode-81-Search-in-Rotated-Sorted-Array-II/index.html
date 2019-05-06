@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.Do not allocate extra space for another array, you must do this by m">
+  <meta name="description" content="Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).You are given a target value to search. If found in t">
 <meta name="keywords" content="leetcode,线性表,数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="80. Remove Duplicates from Sorted Array II">
-<meta property="og:url" content="https://smashell.github.io/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/index.html">
+<meta property="og:title" content="81. Search in Rotated Sorted Array II">
+<meta property="og:url" content="https://smashell.github.io/2019/05/06/leetcode-81-Search-in-Rotated-Sorted-Array-II/index.html">
 <meta property="og:site_name" content="smashell&#39;s life">
-<meta property="og:description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.Do not allocate extra space for another array, you must do this by m">
+<meta property="og:description" content="Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).You are given a target value to search. If found in t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-30T04:01:27.511Z">
+<meta property="og:updated_time" content="2019-05-06T12:07:40.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="80. Remove Duplicates from Sorted Array II">
-<meta name="twitter:description" content="题目描述Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.Do not allocate extra space for another array, you must do this by m">
+<meta name="twitter:title" content="81. Search in Rotated Sorted Array II">
+<meta name="twitter:description" content="Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).You are given a target value to search. If found in t">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://smashell.github.io/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/">
+  <link rel="canonical" href="https://smashell.github.io/2019/05/06/leetcode-81-Search-in-Rotated-Sorted-Array-II/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>80. Remove Duplicates from Sorted Array II | smashell's life</title>
+  <title>81. Search in Rotated Sorted Array II | smashell's life</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/04/30/leetcode-80-remove-duplicates-from-sorted-array-2/">
+    <link itemprop="mainEntityOfPage" href="https://smashell.github.io/2019/05/06/leetcode-81-Search-in-Rotated-Sorted-Array-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smashell">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">80. Remove Duplicates from Sorted Array II
+          <h1 class="post-title" itemprop="name headline">81. Search in Rotated Sorted Array II
 
               
             
@@ -354,7 +354,7 @@
                 
               
 
-              <time title="Created: 2019-04-30 11:22:09 / Modified: 12:01:27" itemprop="dateCreated datePublished" datetime="2019-04-30T11:22:09+08:00">2019-04-30</time>
+              <time title="Created: 2019-05-06 19:58:07 / Modified: 20:07:40" itemprop="dateCreated datePublished" datetime="2019-05-06T19:58:07+08:00">2019-05-06</time>
             
 
             
@@ -393,11 +393,15 @@
       
 
       
-        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.<br>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.<br><a id="more"></a><br>Example 1:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [1,1,1,2,2,3],</span><br><span class="line">Your <span class="keyword">function</span> should <span class="built_in">return</span> length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</span><br><span class="line">It doesn<span class="string">'t matter what you leave beyond the returned length.</span></span><br></pre></td></tr></table></figure></p>
-<p>Example 2:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [0,0,1,1,1,1,2,3,3],</span><br><span class="line">Your <span class="keyword">function</span> should <span class="built_in">return</span> length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.</span><br><span class="line">It doesn<span class="string">'t matter what values are set beyond the returned length.</span></span><br></pre></td></tr></table></figure></p>
-<p>Clarification:<br>Confused why the returned value is an integer but your answer is an array?<br>Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.<br>Internally you can think of this:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="keyword">int</span> len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>跟<a href="/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/" title="26. Remove Duplicates from Sorted Array">26. Remove Duplicates from Sorted Array</a>比，可以重复一次，代码结构是一样的，只不过需要跳过一个重复记录。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length();</span><br><span class="line">        <span class="keyword">if</span> (len &lt;=<span class="number">2</span>) <span class="keyword">return</span> len;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; len; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != nums[index<span class="number">-2</span>]) &#123;</span><br><span class="line">                nums[index++] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.<br>(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).<br>You are given a target value to search. If found in the array return true, otherwise return false.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Example <span class="number">1</span>:</span><br><span class="line">Input: nums = [<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>], target = <span class="number">0</span></span><br><span class="line">Output: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>Example 2:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>], target = <span class="number">3</span></span><br><span class="line">Output: <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p>Follow up:</p>
+<ul>
+<li>This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</li>
+<li>Would this affect the run-time complexity? How and why?</li>
+</ul>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>存在重复元素，则判断边界条件的时候如果相等就不能确定是不是单调递增，可以跳过重复的元素。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">int</span> right = nums.size();</span><br><span class="line">      <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums[mid]==target) &#123;</span><br><span class="line">          <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nums[left] &lt; nums[mid]) &#123;</span><br><span class="line">          <span class="keyword">if</span> (nums[left] &lt;= target &amp;&amp; target &lt; nums[mid]) &#123;</span><br><span class="line">            right = mid;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span> &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (nums[left] &gt; nums[mid]) &#123;</span><br><span class="line">          <span class="keyword">if</span> (nums[mid] &lt;= target &amp;&amp; target &lt;= nums[right<span class="number">-1</span>]) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">          left++;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -438,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/16/leetcode-26-remove-duplicates-from-sorted-array/" rel="next" title="26. Remove Duplicates from Sorted Array">
-                <i class="fa fa-chevron-left"></i> 26. Remove Duplicates from Sorted Array
+              <a href="/2019/05/05/kafka-intro/" rel="next" title="kafka快速入门">
+                <i class="fa fa-chevron-left"></i> kafka快速入门
               </a>
             
           </div>
@@ -447,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/30/leetcode-33-Search-in-Rotated-Sorted-Array/" rel="prev" title="33. Search in Rotated Sorted Array">
-                33. Search in Rotated Sorted Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -590,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
